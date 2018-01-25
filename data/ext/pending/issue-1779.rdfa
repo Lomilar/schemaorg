@@ -10,13 +10,35 @@
       <span>Source:  <a property="dc:source" href="https://github.com/schemaorg/schemaorg/issues/1779">#1779</a></span>
     </div>
 
-    <div typeof="rdf:Property" resource="http://schema.org/credentialType">
+    <div typeof="rdfs:Class" resource="http://schema.org/EducationalOccupationalCertificate">
       <span>Category: <span property="schema:category">issue-1779</span></span>
-      <span class="h" property="rdfs:label">credentialType</span>
-      <span property="rdfs:comment">The category of credential being described, for example "degree”, “certificate”, “badge”, or more specific term.</span>
-      <span>domainIncludes: <a property="http://schema.org/domainIncludes" href="http://schema.org/EducationalOccupationalCredential">EducationalOccupationalCredential</a></span>
-      <span>rangeIncludes: <a property="http://schema.org/rangeIncludes" href="http://schema.org/DefinedTerm">DefinedTerm</a></span>
+      <span class="h" property="rdfs:label">EducationalOccupationalCertificate</span>
+      <span property="rdfs:comment">An educational or occupational certificate. A certificate that may be awarded to a person or other entity that meets the requirements defined by the credentialer.</span>
+      <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/EducationalOccupationalCredential">EducationalOccupationalCredential</a></span>
       <link property="http://schema.org/isPartOf" href="http://pending.schema.org" />
       <span>Source:  <a property="dc:source" href="https://github.com/schemaorg/schemaorg/issues/1779">#1779</a></span>
+    </div>
+
+<!-- Example of externally defined schema -->
+
+    <div typeof="rdfs:Class" resource="http://sqa.org.uk/HigherNationalCertificate">
+      <span>Category: <span property="schema:category">issue-1779</span></span>
+      <span class="h" property="rdfs:label">Higher National Certificate</span>
+      <span property="rdfs:comment">A Higher National Certificate recognized by the Scottish Qualifications Authority. Higher National Certificates (HNCs) and Higher National Diplomas (HNDs) have been well-respected qualifications since they were introduced in the mid-1920s. During that time they have been constantly updated to make sure that they’re always relevant. They cover a huge range of occupations, and provide the skills and knowledge needed for employment at middle management and technician level.</span>      <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/EducationalOccupationalCertificate">EducationalOccupationalCertificate</a></span>
+      <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/EducationalOccupationalCertificate">EducationalOccupationalCertificate</a></span>
+    <div>
+
+    <div typeof="rdf:Property" resource="http://sqa.org.uk/scqfCreditPointsRequired">
+      <span class="h" property="rdfs:label">SCQF Credit Points</span>
+      <span property="rdfs:comment">The number of credit points required or completed by this certificate.</span>
+      <span>domainIncludes: <a property="http://schema.org/domainIncludes" href="http://sqa.org.uk/HigherNationalCertificate">HigherNationalCertificate</a></span>
+      <span>rangeIncludes: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Integer">Integer</a></span>
+    </div>
+
+    <div typeof="rdf:Property" resource="http://sqa.org.uk/hnuCreditsRequired">
+      <span class="h" property="rdfs:label">Higher National Unit Credits</span>
+      <span property="rdfs:comment">The number of higher national unit credits required or completed by this certificate.</span>
+      <span>domainIncludes: <a property="http://schema.org/domainIncludes" href="http://sqa.org.uk/HigherNationalCertificate">HigherNationalCertificate</a></span>
+      <span>rangeIncludes: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Integer">Integer</a></span>
     </div>
 </div>
